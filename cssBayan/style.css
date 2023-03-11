@@ -1,0 +1,50 @@
+main {
+    max-width: 120em;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1 {text-align: center;}
+.icon-header span::before{
+
+    content: "\2716";
+
+}
+/* &#10006;	&#x2716;	✖ */
+/* 	\271A    \2716 */
+
+.min-header {
+    padding: 0.5rem;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+}
+.card {
+    max-width: 50em;
+    margin-left: auto;
+    margin-right: auto; 
+}
+.mem {
+    height: 83vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-size: cover; */
+    background-size: 62vh;
+}
+#mem1 {
+    background-image: url('./img/D9jH39rUTEc.jpeg');
+}
+#mem2 {
+    background-image: url('./img/eLTsR1P92L4.jpeg');
+}
+#mem3 {
+    background-image: url('./img/EwMN1ciGL-I.jpeg');
+}
+#mem4 {
+    background-image: url('./img/jozNctEpmrw.jpeg');
+}
+#mem5 {
+    background-image: url('./img/RbpvMMz4VfI.jpeg');
+}
+#mem6 {
+    background-image: url('./img/vlMij2FYdvM.jpeg');
+}
