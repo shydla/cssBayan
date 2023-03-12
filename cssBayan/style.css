@@ -1,74 +1,102 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
-body { 
-    padding: 3em;
+body {
+  padding: 3em;
 }
 main {
-    display: flex;
-    max-width: 100em;
-    flex-direction: column;
-    align-items: center;
-    font-size: 2em;
+  display: flex;
+  max-width: 100em;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2em;
 }
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60vw;
 }
-h1 {text-align: center;
-font-size: 3em;}
+h1 {
+  text-align: center;
+  font-size: 3em;
+}
 .card {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1em;
-    border-top: 1px solid #000;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  border-top: 1px solid #000;
 }
-/* .card  input {
-    display: none;
-} */
+.card input {
+  display: none;
+}
 label {
-
-    width: 100%;
-    padding-bottom: 1em;
+  width: 100%;
+  padding-bottom: 1em;
 }
 .description {
-    display: flex;
-    justify-content: space-between;
-    /* width: 30em; */
+  display: flex;
+  justify-content: space-between;
+  /* width: 30em; */
 }
 .icon-header {
-    visibility: hidden;
+  visibility: hidden;
 }
 img {
-
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
-    /* object-fit: contain; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  /* object-fit: contain; */
 }
 .mem-img {
-    display: none;
+  display: none;
+  opacity: 0;
+  transition: all 2s ease;
 }
 :checked ~ .mem-img {
-    display: block;
-  }
-  :checked ~ label .icon-header {
-    visibility:visible;
-rotate: 45deg;
-
+  display: block;
+  opacity: 1;
 }
-.card:hover .mem-img {
-    display: block;
+:checked ~ label:hover .icon-header {
+  visibility: visible;
+  rotate: 45deg;
+  /* animation: icon 1s; */
 }
 .card:hover .icon-header {
-    display: block;
-    visibility:visible;
+    visibility: visible;
+    rotate: 45deg;
+    animation: icon 1s;
+  }
+@keyframes icon {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 45deg;
+  }
 }
-
-
+.card:hover {
+    cursor: pointer;
+}
+label:hover {
+    cursor: pointer;
+}
+.card:hover .mem-img {
+  display: block;
+  opacity: 1;
+  cursor: pointer;
+  /* transition: all 2s ease; */
+  animation: show 1s;
+}
+@keyframes show {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.card:hover .icon-header {
+  display: block;
+  visibility: visible;
+}
