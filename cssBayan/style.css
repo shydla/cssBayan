@@ -1,9 +1,10 @@
 * {
   margin: 0;
-  padding: 0;
+  /* padding: 0; */
 }
 body {
-  padding: 3em;
+  /* padding: 3em; */
+  background-color: #F5F5EB;
 }
 main {
   display: flex;
@@ -11,12 +12,14 @@ main {
   flex-direction: column;
   align-items: center;
   font-size: 2em;
+  
 }
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 60vw;
+
 }
 h1 {
   text-align: center;
@@ -27,15 +30,17 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1em;
+  padding-top: 0.5em;
   border-top: 1px solid #000;
+  color: #4984DF;
 }
 .card input {
   display: none;
+
 }
 label {
   width: 100%;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
 }
 .description {
   display: flex;
@@ -49,9 +54,45 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
-  /* object-fit: contain; */
+  object-fit: cover;
+  width: 100%;
 }
+  @media screen and (min-width: 320px ){
+    .card {
+        font-size: 1.2em;
+        width: 100%;
+    }
+
+
+  }
+  @media screen and (min-width: 820px ){
+    .card  {
+        font-size: 1em;
+        width: 80%;
+    }
+
+
+     
+  }
+  @media screen and (min-width: 1920px ){
+    .card  {
+        font-size: 0.8em;
+        width: 60%;
+    }
+     
+  }
+  @media (hover: hover) {
+    .card:hover {
+        cursor: pointer;
+        color:#000;
+    }
+    label:hover {
+        cursor: pointer;
+    
+    }
+  }
+
+
 .mem-img {
   display: none;
   opacity: 0;
@@ -79,12 +120,11 @@ img {
     rotate: 45deg;
   }
 }
-.card:hover {
-    cursor: pointer;
-}
-label:hover {
-    cursor: pointer;
-}
+
+/* .card:hover .card{
+    
+} */
+
 .card:hover .mem-img {
   display: block;
   opacity: 1;
@@ -96,7 +136,17 @@ label:hover {
     from {opacity: 0;}
     to {opacity: 1;}
 }
-.card:hover .icon-header {
+.container {
+    display: flex;
+}
+.container:hover .icon-header {
   display: block;
   visibility: visible;
+}
+.container:hover .card {
+    color:#000;
+}
+.card:active .str-header {
+    color: #4984DF;
+    /* transition: all 1s ease; */
 }
