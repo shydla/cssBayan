@@ -1,50 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body { 
+    padding: 3em;
+}
 main {
-    max-width: 120em;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    max-width: 100em;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2em;
 }
-h1 {text-align: center;}
-.icon-header span::before{
-
-    content: "\2716";
-
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
 }
-/* &#10006;	&#x2716;	✖ */
-/* 	\271A    \2716 */
+h1 {text-align: center;
+font-size: 3em;}
+.card {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    border-top: 1px solid #000;
+}
+/* .card  input {
+    display: none;
+} */
+label {
 
-.min-header {
-    padding: 0.5rem;
-    font-size: 1.6rem;
+    width: 100%;
+    padding-bottom: 1em;
+}
+.description {
     display: flex;
     justify-content: space-between;
+    /* width: 30em; */
 }
-.card {
-    max-width: 50em;
+.icon-header {
+    visibility: hidden;
+}
+img {
+
+    display: block;
     margin-left: auto;
-    margin-right: auto; 
+    margin-right: auto;
+    width: 40%;
+    /* object-fit: contain; */
 }
-.mem {
-    height: 83vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    /* background-size: cover; */
-    background-size: 62vh;
+.mem-img {
+    display: none;
 }
-#mem1 {
-    background-image: url('./img/D9jH39rUTEc.jpeg');
+:checked ~ .mem-img {
+    display: block;
+  }
+  :checked ~ label .icon-header {
+    visibility:visible;
+rotate: 45deg;
+
 }
-#mem2 {
-    background-image: url('./img/eLTsR1P92L4.jpeg');
+.card:hover .mem-img {
+    display: block;
 }
-#mem3 {
-    background-image: url('./img/EwMN1ciGL-I.jpeg');
+.card:hover .icon-header {
+    display: block;
+    visibility:visible;
 }
-#mem4 {
-    background-image: url('./img/jozNctEpmrw.jpeg');
-}
-#mem5 {
-    background-image: url('./img/RbpvMMz4VfI.jpeg');
-}
-#mem6 {
-    background-image: url('./img/vlMij2FYdvM.jpeg');
-}
+
+
