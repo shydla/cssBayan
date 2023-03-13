@@ -111,7 +111,10 @@ img {
     visibility: visible;
     rotate: 45deg;
     animation: icon 1s;
-  }
+}
+:checked ~ label {
+  color: #000;
+}
 @keyframes icon {
   0% {
     rotate: 0deg;
