@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  /* padding: 0; */
+}
+body {
+  /* padding: 3em; */
+  background-color: #F5F5EB;
+}
+main {
+  display: flex;
+  max-width: 100em;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2em;
+  
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60vw;
+
+}
+h1 {
+  text-align: center;
+  font-size: 3em;
+}
+.card {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.5em;
+  border-top: 1px solid #000;
+  color: #4984DF;
+}
+.card input {
+  display: none;
+
+}
+label {
+  width: 100%;
+  padding-bottom: 0.5em;
+}
+.description {
+  display: flex;
+  justify-content: space-between;
+  /* width: 30em; */
+}
+.icon-header {
+  visibility: hidden;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+  width: 100%;
+}
+  @media screen and (min-width: 320px ){
+    .card {
+        font-size: 1.2em;
+        width: 100%;
+    }
+
+
+  }
+  @media screen and (min-width: 820px ){
+    .card  {
+        font-size: 1em;
+        width: 80%;
+    }
+
+
+     
+  }
+  @media screen and (min-width: 1920px ){
+    .card  {
+        font-size: 0.8em;
+        width: 60%;
+    }
+     
+  }
+  @media (hover: hover) {
+    .card:hover {
+        cursor: pointer;
+        color:#000;
+    }
+    label:hover {
+        cursor: pointer;
+    
+    }
+  }
+
+
+.mem-img {
+  display: none;
+  opacity: 0;
+  transition: all 2s ease;
+}
+:checked ~ .mem-img {
+  display: block;
+  opacity: 1;
+}
+:checked ~ label:hover .icon-header {
+  visibility: visible;
+  rotate: 45deg;
+  /* animation: icon 1s; */
+}
+.card:hover .icon-header {
+    visibility: visible;
+    rotate: 45deg;
+    animation: icon 1s;
+}
+:checked ~ label {
+  color: #000;
+}
+@keyframes icon {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 45deg;
+  }
+}
+
+/* .card:hover .card{
+    
+} */
+
+.card:hover .mem-img {
+  display: block;
+  opacity: 1;
+  cursor: pointer;
+  /* transition: all 2s ease; */
+  animation: show 1s;
+}
+@keyframes show {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.container {
+    display: flex;
+}
+.container:hover .icon-header {
+  display: block;
+  visibility: visible;
+}
+.container:hover .card {
+    color:#000;
+}
+.card:active .str-header {
+    color: #4984DF;
+    /* transition: all 1s ease; */
+}
